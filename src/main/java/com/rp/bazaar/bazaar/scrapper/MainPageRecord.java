@@ -1,7 +1,7 @@
 package com.rp.bazaar.bazaar.scrapper;
 
-record MainPageRecord(Criteria criteria, Subpages subpages, AuctionsPerPage auctionsPerPage) {
+record MainPageRecord(Criteria criteria, Subpages subpages) {
     static MainPageRecord empty() {
-        return new MainPageRecord(Criteria.empty(), new Subpages(0), new AuctionsPerPage(0));
+        return new MainPageRecord(Criteria.empty(), new Subpages(0));
     }
 }

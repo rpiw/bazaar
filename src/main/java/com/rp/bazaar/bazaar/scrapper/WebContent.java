@@ -20,13 +20,17 @@ class WebContent {
 
     private URL url;
 
+    public static WebContent getInstance(String address) throws MalformedURLException, URISyntaxException {
+        return new WebContent(address);
+    }
+
     Document getDocument() {
         return document;
     }
 
     private Document document;
 
-    WebContent(String url) throws URISyntaxException, MalformedURLException {
+    private WebContent(String url) throws URISyntaxException, MalformedURLException {
         this.url = new URI(url).toURL();
     }
 
